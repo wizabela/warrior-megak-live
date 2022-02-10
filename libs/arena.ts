@@ -1,17 +1,12 @@
 import {Warrior} from "./warrior";
 
 export class Arena {
-    constructor(warrior1, warrior2) {
-        if (!(warrior1 instanceof Warrior)) {
-            throw new Error('warrior1 must be an instance of Warrior class!');
-        }
+    activeWarrior: number;
+    constructor(
+        public warrior1: Warrior,
+        public warrior2: Warrior,
+    ) {
 
-        if (!(warrior2 instanceof Warrior)) {
-            throw new Error('warrior2 must be an instance of Warrior class!');
-        }
-
-        this.warrior1 = warrior1;
-        this.warrior2 = warrior2;
         this.activeWarrior = 2;
     }
 
