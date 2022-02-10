@@ -14,8 +14,8 @@ export class Arena {
     ) {}
 
     fight(): Warrior | null {
-        const attacker = this.activeWarrior === 1 ? this.warrior1 : this.warrior2;
-        const attacked = this.activeWarrior === 1 ? this.warrior2 : this.warrior1;
+        const attacker = this.activeWarrior === ActiveWarrior.First ? this.warrior1 : this.warrior2;
+        const attacked = this.activeWarrior === ActiveWarrior.First ? this.warrior2 : this.warrior1;
 
         const attackingHitPoints = attacker.getHitPoints();
         const attackedOldHp = attacked.getHp();
@@ -25,14 +25,10 @@ export class Arena {
 
         attacked.setHp(attackedNewHp);
 
-        this.activeWarrior = this.activeWarrior === 1 ? 2 : 1;
-        /**
-         if (this.activeWarrior === 1) {
-        this.activeWarrior = 2;
-      } else {
-        this.activeWarrior = 1;
-      }
-         */
+        this.activeWarrior = this.activeWarrior === ActiveWarrior.First
+            ? ActiveWarrior.Second
+            : ActiveWarrior.First;
+
 
         if (attackedNewHp <= 0) {
             console.log(attacked.getName(), 'goes to Valhalla');
