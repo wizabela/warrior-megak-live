@@ -1,0 +1,26 @@
+{
+  "name": "warrior-megak-live",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node index.ts",
+    "start:dev": "tsnd index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wizabela/warrior-megak-live.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wizabela/warrior-megak-live/issues"
+  },
+  "homepage": "https://github.com/wizabela/warrior-megak-live#readme",
+  "devDependencies": {
+    "ts-node": "^10.5.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.5"
+  }
+}
