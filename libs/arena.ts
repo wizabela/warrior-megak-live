@@ -13,7 +13,7 @@ export class Arena {
         public warrior2: Warrior,
     ) {}
 
-    fight() {
+    fight(): Warrior | null {
         const attacker = this.activeWarrior === 1 ? this.warrior1 : this.warrior2;
         const attacked = this.activeWarrior === 1 ? this.warrior2 : this.warrior1;
 
