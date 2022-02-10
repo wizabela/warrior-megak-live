@@ -1,14 +1,17 @@
 import {Warrior} from "./warrior";
 
+enum ActiveWarrior {
+    First,
+    Second,
+}
+
 export class Arena {
-    activeWarrior: number;
+    activeWarrior: ActiveWarrior = ActiveWarrior.Second;
+
     constructor(
         public warrior1: Warrior,
         public warrior2: Warrior,
-    ) {
-
-        this.activeWarrior = 2;
-    }
+    ) {}
 
     fight() {
         const attacker = this.activeWarrior === 1 ? this.warrior1 : this.warrior2;
